@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -10,17 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body>
-		<header>
-			<nav class="nav is-hidden-mobile">
+		<header class=heady>
+			<nav class="nav">
 				<!--Used for creating 3 grids-->
 				<div class="nav-left">
-					<a href="" class="nav-item is-hidden-mobile"></a>
+					<a href="" class="nav-item"></a>
 				</div>
 				<div class="nav-center">
-					<a href="index.html" class="nav-item is-hidden-mobile is-active"> <h1> Search IT! </h1> </a>
+					<a href="index.html" class="nav-item"> <h1> Search IT! </h1> </a>
 				</div>
 				<div class="nav-right">
-					<a href="" class="nav-item is-hidden-mobile"> Admin </a>
+					<a href="" class="nav-item"> Admin </a>
 				</div>
 
 				<!--
@@ -46,33 +45,63 @@
 			</nav>
 		</header><div></div>
 		<article>
-			<div class="box">
+			<div class="box outer">
 				<div class="columns">
 					<div class="column">
 						<p class="control">
-							<input class="input" type="text" placeholder="Search Keyword">
+							<input id = "search-input" class="input" type="text" placeholder="Search Keyword">
 						</p>
 					</div>
 					<div class="column is-one-quarter">
-						<a class="button is-dark">Search</a>
+						<button id="sbutton" type=submit >Search</button>
 					</div>
 				</div>
+				<form>
+					<div class="field">
+					  <p class="control">
+					    <label class="radio">
+					      <input checked id ="all"type="radio" name="ftype">
+					      all
+					    </label>
+					    <label class="radio">
+					      <input id=image type="radio" name="ftype">
+					      image
+					    </label>
+					    <label class="radio">
+					      <input id=doc type="radio" name="ftype">
+					      doc
+					    </label>
+					    <label class="radio">
+					      <input id=ppt type="radio" name="ftype">
+					      ppt
+					    </label>
+					    <label class="radio">
+					      <input id=pdf type="radio" name="ftype">
+					      pdf
+					    </label>
+					  </p>
+					</div>
+				</form>
 			</div>
+			<div id="anbox" class="box ans"></div>
 
 		</article>
+		<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDEIwqNOTk1xROYjZUyOnsczGYJl5JBtpI",
+				authDomain: "searchengine-80e03.firebaseapp.com",
+				databaseURL: "https://searchengine-80e03.firebaseio.com",
+				storageBucket: "searchengine-80e03.appspot.com",
+				messagingSenderId: "909740379164"
+			};
 
-
+			firebase.initializeApp(config);
+			
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$(".box").mouseenter(function(){
-					$(this).css({"background-color": "#A9BCF5"})
-				});
-				$(".box").mouseleave(function(){
-					$(this).css({"background-color": "white"})
-				});
-			});
-		</script>
+		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>

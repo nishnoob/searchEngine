@@ -1,0 +1,18 @@
+{
+	"authId" : {
+		"0" : {
+			"Name" : "Agnish",
+			"PenName" : "Nish",
+			"description" : "A budding writer. Hello! A quick brown fox jumps over the lazy dogs.",
+			"file" : "0.txt",
+			"ftype" : "word"
+		},
+		"1" : {
+			"Name" : "XYZ",
+			"Pen Name" : "Xzee",
+			"description" : "A quick brown fox jumps over the lazy dogs. Hello! A quick brown fox jumps over the lazy dogs.",
+			"file" : "1.jpg",
+			"ftype" : "image"
+		}
+	}
+}

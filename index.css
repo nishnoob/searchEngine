@@ -1,7 +1,32 @@
+html{
+	background-image: url(bgk.png);
+	background-size: contain; 
+}
 header{
 	margin-bottom: 20px;
 }
-.box{
+.nav{
+	background: #72d0eb;
+}
+.ans{
 	margin-left: 10%;
 	margin-right: 10%;
+}
+.outer{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#sbutton {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  background: #233642;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+}
+#sbutton:hover {
+  background: #3cb0fd;
+  text-decoration: none;
 }
